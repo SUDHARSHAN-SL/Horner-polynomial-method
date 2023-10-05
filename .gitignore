@@ -1,33 +1,17 @@
-# Gradle files
-.gradle/
-build/
+def horner(poly, n, x):
 
-# Local configuration file (sdk path, etc)
-local.properties
+    result = poly[0]
+ 
+    for i in range(1, n):
+ 
+        result = result*x + poly[i]
+ 
+    return result
+ 
+poly = [2, -6, 2, -1]
 
-# Log/OS Files
-*.log
+x = 3
 
-# Android Studio generated files and folders
-captures/
-.externalNativeBuild/
-.cxx/
-*.apk
-output.json
-
-# IntelliJ
-*.iml
-.idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
-
-# Keystore files
-*.jks
-*.keystore
-
-# Google Services (e.g. APIs or Firebase)
-google-services.json
-
-# Android Profiling
-*.hprof
+n = len(poly)
+ 
+print("Value of polynomial is:", horner(poly, n, x))
